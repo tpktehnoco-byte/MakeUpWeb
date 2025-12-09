@@ -1,0 +1,296 @@
+{
+  "de": {
+    "global": {
+      "siteTitle": "PAINTED BY SARA",
+      "navHome": "Startseite",
+      "navBooking": "Booking",
+      "navGallery": "Galerie",
+      "navContact": "Kontakt",
+      "footerCopyright": "© 2024 Painted by Sara. Alle Rechte vorbehalten."
+    },
+    "home": {
+      "heroTitle": "Ihre Vision, Meine Kunst",
+      "heroSubtitle": "Professionelles Make-up für unvergessliche Momente.",
+      "heroButtonText": "Jetzt Buchen",
+      "aboutTitle": "Ihre Vision, Meine Kunst",
+      "aboutMainText": "Hallo, ich bin Sara. Als zertifizierte Makeup-Artistin ist es meine Mission, Ihre natürliche Schönheit zu unterstreichen und Ihnen Selbstvertrauen für jeden Anlass zu geben. Mit einem Auge für Details und einer Leidenschaft für Trends kreiere ich Looks, die zeitlos und perfekt für Sie sind.",
+      "aboutExpertiseTitle": "Meine Expertise",
+      "aboutExpertiseItems": [
+        {
+          "icon": "fa-heart",
+          "text": "Braut-Make-up, das Ihren schönsten Tag unvergesslich macht."
+        },
+        {
+          "icon": "fa-palette",
+          "text": "Kreative Looks für Events, Fotoshootings und Special Effects."
+        },
+        {
+          "icon": "fa-graduation-cap",
+          "text": "Persönliche Make-up-Lektionen, um Techniken zu erlernen."
+        },
+        {
+          "icon": "fa-sparkles",
+          "text": "Spezialisiert auf Hautpflege und langanhaltende Ergebnisse."
+        }
+      ],
+      "servicesTitle": "Meine Spezialgebiete",
+      "serviceBridal": {
+        "name": "Braut-Make-up",
+        "description": "Ein makelloser Look für Ihren schönsten Tag."
+      },
+      "serviceEvents": {
+        "name": "Event & Gala",
+        "description": "Strahlen Sie auf jeder Feier und jedem wichtigen Event."
+      },
+      "servicePhotoshoot": {
+        "name": "Photoshooting",
+        "description": "Perfektes Make-up, das von der Kamera brilliert."
+      },
+      "testimonialsTitle": "Was meine Kunden sagen",
+      "testimonial1": {
+        "text": "\"Sara hat mich an meinem Hochzeitstag wunderschön geschminkt. Ich habe mich so selbstbewusst und wunderschön gefühlt! Der Look hat den ganzen Tag perfekt gehalten.\"",
+        "author": "- Lena M."
+      },
+      "testimonial2": {
+        "text": "\"Absolut beeindruckend! Sara versteht es, die Wünsche ihrer Kunden umzusetzen und noch darüber hinaus zu gehen. Jedes Mal, wenn sie meinen Make-up macht, fühle ich mich wie ein Star.\"",
+        "author": "- Jasmin K."
+      }
+    },
+    "booking": {
+      "pageTitle": "Booking & Preise",
+      "introText": "Wählen Sie das Paket, das am besten zu Ihren Bedürfnissen passt. Für weitere Fragen oder personalisierte Wünsche kontaktieren Sie mich bitte.",
+      "formTitle": "Reservierungsformular",
+      "successMessage": "Ihre Anfrage wurde erfolgreich gesendet! Sie erhalten in den nächsten 24 Stunden eine Bestätigungs-E-Mail mit den Details.",
+      "packages": [
+        {
+          "id": "soft-glam",
+          "name": "Soft Glam",
+          "price": "70€",
+          "duration": "1.5 Stunden",
+          "description": "Perfekt für einen Abend aus, Geburtstage oder wenn Sie einfach nur aussehen und sich fühlen möchten, ohne zu viel Make-up. Fokus auf ein leuchtendes, strahlendes Hautbild und weiche Töne."
+        },
+        {
+          "id": "full-glam",
+          "name": "Full Glam",
+          "price": "90€",
+          "duration": "2 Stunden",
+          "description": "Ein dramatischerer und mutigerer Look, ideal für Partys und besondere Anlässe. Beinhaltet Konturierung, betonte Augen und perfekte Lippen."
+        },
+        {
+          "id": "bridal-trial",
+          "name": "Braut-Make-up - Probetermin",
+          "price": "60€",
+          "duration": "1.5 Stunden",
+          "description": "Eine Testversion Ihres Hochzeits-Make-ups. Dies ist entscheidend, um den Look zu finalisieren, Wünsche zu besprechen und sicherzustellen, dass Sie zu 100 % zufrieden sind."
+        },
+        {
+          "id": "bridal-day",
+          "name": "Braut-Make-up - Hochzeitstag",
+          "price": "150€",
+          "duration": "2 Stunden",
+          "description": "Die vollständige Vorbereitung für Ihren großen Tag. Beinhaltet eine detaillierte Beratung, die Vorbereitung der Haut und einen makellosen Look, der durch Tränen, Lächeln und Tanz hält. Die Anreise zum Ort ist im Preis für das Stadtgebiet enthalten."
+        }
+      ]
+    },
+    "gallery": {
+      "pageTitle": "Galerie",
+      "introText": "Bald verfügbar..."
+    }
+  },
+  "en": {
+    "global": {
+      "siteTitle": "PAINTED BY SARA",
+      "navHome": "Home",
+      "navBooking": "Booking",
+      "navGallery": "Gallery",
+      "navContact": "Contact",
+      "footerCopyright": "© 2024 Painted by Sara. All rights reserved."
+    },
+    "home": {
+      "heroTitle": "Your Vision, My Artistry",
+      "heroSubtitle": "Professional makeup for unforgettable moments.",
+      "heroButtonText": "Book Now",
+      "aboutTitle": "Your Vision, My Artistry",
+      "aboutMainText": "Hello, I'm Sara. As a certified makeup artist, my mission is to enhance your natural beauty and give you the confidence to shine for any occasion. With an eye for detail and a passion for trends, I create looks that are timeless and perfectly you.",
+      "aboutExpertiseTitle": "My Expertise",
+      "aboutExpertiseItems": [
+        {
+          "icon": "fa-heart",
+          "text": "Bridal makeup that makes your big day unforgettable."
+        },
+        {
+          "icon": "fa-palette",
+          "text": "Creative looks for events, photoshoots, and special effects."
+        },
+        {
+          "icon": "fa-graduation-cap",
+          "text": "Personal makeup lessons to learn new techniques."
+        },
+        {
+          "icon": "fa-sparkles",
+          "text": "Specializing in skincare and long-lasting results."
+        }
+      ],
+      "servicesTitle": "My Specialties",
+      "serviceBridal": {
+        "name": "Bridal Makeup",
+        "description": "A flawless look for the most beautiful day of your life."
+      },
+      "serviceEvents": {
+        "name": "Events & Galas",
+        "description": "Shine at any party or special event."
+      },
+      "servicePhotoshoot": {
+        "name": "Photoshoot",
+        "description": "Perfect makeup that looks stunning on camera."
+      },
+      "testimonialsTitle": "What My Clients Say",
+      "testimonial1": {
+        "text": "\"Sara did my makeup for my wedding day and I felt so beautiful and confident! The look lasted perfectly all day.\"",
+        "author": "- Jessica R."
+      },
+      "testimonial2": {
+        "text": "\"Absolutely amazing! Sara has a talent for understanding exactly what you want and enhancing it. I feel like a star every time.\"",
+        "author": "- Maria P."
+      }
+    },
+    "booking": {
+      "pageTitle": "Booking & Pricing",
+      "introText": "Select the package that best suits your needs...",
+      "formTitle": "Booking Form",
+      "successMessage": "Your request has been successfully sent...",
+      "packages": [
+        {
+          "id": "soft-glam",
+          "name": "Soft Glam",
+          "price": "70€",
+          "duration": "1.5 hours",
+          "description": "Perfect for a night out, birthdays, or when you just want to look and feel your best without too much makeup. Focus on a radiant, glowing complexion and soft tones."
+        },
+        {
+          "id": "full-glam",
+          "name": "Full Glam",
+          "price": "90€",
+          "duration": "2 hours",
+          "description": "A more dramatic and bolder look, ideal for parties and special events. Includes contouring, emphasized eyes, and perfect lips."
+        },
+        {
+          "id": "bridal-trial",
+          "name": "Bridal Makeup - Trial",
+          "price": "60€",
+          "duration": "1.5 hours",
+          "description": "A trial version of your wedding makeup. This is crucial for finalizing the look, discussing wishes, and ensuring you are 100% satisfied."
+        },
+        {
+          "id": "bridal-day",
+          "name": "Bridal Makeup - Wedding Day",
+          "price": "150€",
+          "duration": "2 hours",
+          "description": "Full preparation for your big day. Includes a detailed consultation, skin preparation, and a flawless look that will last through tears, smiles, and dancing. Travel to the location is included in the price for the city area."
+        }
+      ]
+    },
+    "gallery": {
+      "pageTitle": "Gallery",
+      "introText": "Coming soon..."
+    }
+  },
+  "exyu": {
+    "global": {
+      "siteTitle": "PAINTED BY SARA",
+      "navHome": "Početna",
+      "navBooking": "Rezervacije",
+      "navGallery": "Galerija",
+      "navContact": "Kontakt",
+      "footerCopyright": "© 2024 Painted by Sara. Sva prava zadržana."
+    },
+    "home": {
+      "heroTitle": "Vaša Vizija, Moja Umetnost",
+      "heroSubtitle": "Profesionalna šminka za nezaboravne trenutke.",
+      "heroButtonText": "Rezerviši",
+      "aboutTitle": "Vaša Vizija, Moja Umetnost",
+      "aboutMainText": "Zdravo, ja sam Sara. Kao sertifikovani šminker, moja misija je da istaknem vašu prirodnu lepotu i dam vam samopouzdanje da zasijate za svaku priliku. Sa očima za detalje i strašću prema trendovima, kreiram izglede koji su vremenom i savršeno za vas.",
+      "aboutExpertiseTitle": "Moje Ekspertize",
+      "aboutExpertiseItems": [
+        {
+          "icon": "fa-heart",
+          "text": "Vjenčana šminka koja vaš veliki dan čini nezaboravnim."
+        },
+        {
+          "icon": "fa-palette",
+          "text": "Kreativni izgledi za događaje, fotosnimanja i specijalne efekte."
+        },
+        {
+          "icon": "fa-graduation-cap",
+          "text": "Lične lekcije šminkanja da naučite nove tehnike."
+        },
+        {
+          "icon": "fa-sparkles",
+          "text": "Specijalizovana za negu kože i dugotrajne rezultate."
+        }
+      ],
+      "servicesTitle": "Moje Specijalnosti",
+      "serviceBridal": {
+        "name": "Vjenčana Šminka",
+        "description": "Besprekoran izgled za najvažniji dan vašeg života."
+      },
+      "serviceEvents": {
+        "name": "Događaji & Proslave",
+        "description": "Zasijajte na svakoj zabavi i specijalnom događaju."
+      },
+      "servicePhotoshoot": {
+        "name": "Fotografisanje",
+        "description": "Savršena šminka koja fantastično izgleda na kameri."
+      },
+      "testimonialsTitle": "Šta kažu moji klijenti",
+      "testimonial1": {
+        "text": "\"Sara mi je radila šminku za vjenčanje i osjećala sam se tako prekrasno i samopouzdano! Izgled je trajao savršeno cijeli dan.\"",
+        "author": "- Ana M."
+      },
+      "testimonial2": {
+        "text": "\"Apsolutno fantastično! Sara ima talenat da razumije tačno šta želiš i da to unapredi. Osjećam se kao zvijezda svaki put.\"",
+        "author": "- Jelena K."
+      }
+    },
+    "booking": {
+      "pageTitle": "Booking & Cene",
+      "introText": "Odaberite paket koji najbolje odgovara vašim potrebama...",
+      "formTitle": "Formular za rezervaciju",
+      "successMessage": "Vaš zahtev je uspešno poslat...",
+      "packages": [
+        {
+          "id": "soft-glam",
+          "name": "Soft Glam",
+          "price": "70€",
+          "duration": "1.5 sata",
+          "description": "Savršen za izlaske, rođendane ili kada želite da izgledate i osećate se najbolje bez previše šminke. Fokus na svetloj, sjajnoj koži i mekim tonovima."
+        },
+        {
+          "id": "full-glam",
+          "name": "Full Glam",
+          "price": "90€",
+          "duration": "2 sata",
+          "description": "Dramatičniji i smeliji izgled, idealan za proslave i specijalne događaje. Uključuje konturiranje, naglašene oči i savršene usne."
+        },
+        {
+          "id": "bridal-trial",
+          "name": "Vjenčana Šminka - Probna",
+          "price": "60€",
+          "duration": "1.5 sata",
+          "description": "Probna verzija vaše vjenčane šminke. Ovo je ključno za finalizovanje izgleda, diskusiju o željama i osiguravanje da ste 100% zadovoljni."
+        },
+        {
+          "id": "bridal-day",
+          "name": "Vjenčana Šminka - Dan Vjenčanja",
+          "price": "150€",
+          "duration": "2 sata",
+          "description": "Potpuna priprema za vaš veliki dan. Uključuje detaljnu konsultaciju, pripremu kože i besprekoran izgled koji će izdržati kroz suze, osmijehe i ples. Dolazak na lokaciju je uključen u cijenu za područje Grada."
+        }
+      ]
+    },
+    "gallery": {
+      "pageTitle": "Galerija",
+      "introText": "Uskoro dostupno..."
+    }
+  }
+}

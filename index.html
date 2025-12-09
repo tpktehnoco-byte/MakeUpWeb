@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="global.siteTitle">PAINTED BY SARA</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo" data-translate-key="global.siteTitle">PAINTED BY SARA</a>
+            <ul>
+                <li><a href="index.html" class="active" data-translate-key="global.navHome">Startseite</a></li>
+                <li><a href="booking.html" data-translate-key="global.navBooking">Booking & Preise</a></li>
+                <li><a href="galerija.html" data-translate-key="global.navGallery">Galerie</a></li>
+                <li><a href="#contact" data-translate-key="global.navContact">Kontakt</a></li>
+            </ul>
+            <select id="language-switcher">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="exyu">EXYU</option>
+            </select>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Slider Sekcija -->
+        <section class="hero-slider">
+            <div class="slide active"></div>
+
+            <div class="hero-content">
+                <h1 data-translate-key="home.heroTitle">Ihre Vision, Meine Kunst</h1>
+                <p data-translate-key="home.heroSubtitle">Professionelles Make-up für unvergessliche Momente.</p>
+                <a href="booking.html" class="cta-button" data-translate-key="home.heroButtonText">Jetzt Buchen</a>
+            </div>
+
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+
+            <div class="slider-dots"></div>
+        </section>
+
+        <!-- O meni Sekcija -->
+        <section id="about" class="about-section-enhanced">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image"></div>
+                    <div class="about-content">
+                        <h2 data-translate-key="home.aboutTitle">Ihre Vision, Meine Kunst</h2>
+                        <p data-translate-key="home.aboutMainText">
+                            Hallo, ich bin Sara. Als zertifizierte Makeup-Artistin ist es meine Mission, Ihre natürliche
+                            Schönheit zu unterstreichen und Ihnen Selbstvertrauen für jeden Anlass zu geben. Mit einem
+                            Auge für Details und einer Leidenschaft für Trends kreiere ich Looks, die zeitlos und
+                            perfekt für Sie sind.
+                        </p>
+
+                        <h3 data-translate-key="home.aboutExpertiseTitle">Meine Expertise</h3>
+                        <ul class="expertise-list">
+                            <!-- Stavke liste će biti dinamički dodane iz JS-a -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usluge Sekcija -->
+        <section class="services-section">
+            <h2 data-translate-key="home.servicesTitle">Meine Spezialgebiete</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-heart"></i>
+                    <h3 data-translate-key="home.serviceBridal.name">Braut-Make-up</h3>
+                    <p data-translate-key="home.serviceBridal.description">Ein makelloser Look für Ihren schönsten Tag.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-champagne-glasses"></i>
+                    <h3 data-translate-key="home.serviceEvents.name">Event & Gala</h3>
+                    <p data-translate-key="home.serviceEvents.description">Strahlen Sie auf jeder Feier und jedem
+                        wichtigen Event.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-camera"></i>
+                    <h3 data-translate-key="home.servicePhotoshoot.name">Photoshooting</h3>
+                    <p data-translate-key="home.servicePhotoshoot.description">Perfektes Make-up, das von der Kamera
+                        brilliert.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Utisci Klijenata Sekcija -->
+        <section class="testimonials-section">
+            <h2 data-translate-key="home.testimonialsTitle">Was meine Kunden sagen</h2>
+            <div class="testimonials-container">
+                <blockquote>
+                    <p data-translate-key="home.testimonial1.text">"Sara hat mich an meinem Hochzeitstag wunderschön
+                        geschminkt. Ich habe mich so selbstbewusst und wunderschön gefühlt! Der Look hat den ganzen Tag
+                        perfekt gehalten."</p>
+                    <cite data-translate-key="home.testimonial1.author">- Lena M.</cite>
+                </blockquote>
+                <blockquote>
+                    <p data-translate-key="home.testimonial2.text">"Absolut beeindruckend! Sara versteht es, die Wünsche
+                        ihrer Kunden umzusetzen und noch darüber hinaus zu gehen. Jedes Mal, wenn sie meinen Make-up
+                        macht, fühle ich mich wie ein Star."</p>
+                    <cite data-translate-key="home.testimonial2.author">- Jasmin K.</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-translate-key="global.footerCopyright">© 2024 Painted by Sara. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="/js/config-loader.js"></script>
+    <script src="/js/slider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,672 @@
+﻿/* ============================================================================ */
+/*                           PAINTED BY SARA - MAIN CSS                        */
+/* ============================================================================ */
+
+/* --- 1. Global Variables & Reset --- */
+:root {
+    --primary-color: #111111;
+    --secondary-color: #ffffff;
+    --accent-color: #c9a961;
+    /* Sofisticirana zlatna */
+    --text-color: #555555;
+    --light-bg: #f9f9f9;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    --container-width: 1200px;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* --- 2. Header & Navigation --- */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: var(--box-shadow);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav a.active {
+    color: var(--accent-color);
+}
+
+#language-switcher {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* --- 3. Hero Slider (for index.html) --- */
+.hero-slider {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 70px;
+    /* Prostor za fiksni header */
+}
+
+.hero-slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slider .slide.active {
+    opacity: 1;
+}
+
+.hero-slider .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 0 2rem;
+}
+
+.hero-slider .hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-slider .hero-content p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.hero-slider .prev,
+.hero-slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    z-index: 3;
+}
+
+.hero-slider .next {
+    right: 20px;
+    border-radius: 3px 0 0 3px;
+}
+
+.hero-slider .prev {
+    left: 20px;
+    border-radius: 0 3px 3px 0;
+}
+
+.hero-slider .prev:hover,
+.hero-slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-slider .slider-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.hero-slider .dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.hero-slider .dot.active,
+.hero-slider .dot:hover {
+    background-color: var(--accent-color);
+}
+
+/* --- 4. Reusable Section Styles (for index.html) --- */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 15px 35px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Enhanced About Me Section --- */
+.about-section-enhanced {
+    background-color: var(--light-bg);
+    padding: 100px 20px;
+}
+
+.about-section-enhanced .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.about-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.about-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.expertise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expertise-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.expertise-list li i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    margin-top: 3px;
+}
+
+.services-section .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background-color: var(--secondary-color);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    color: var(--text-color);
+}
+
+.testimonials-section {
+    background-color: var(--light-bg);
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonials-container blockquote {
+    background-color: var(--secondary-color);
+    border-left: 5px solid var(--accent-color);
+    padding: 1.5rem 2rem;
+    margin: 0;
+    max-width: 500px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    font-style: italic;
+    text-align: left;
+}
+
+.testimonials-container cite {
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-style: normal;
+}
+
+/* --- 5. Booking Page Specific Styles (for booking.html) --- */
+.booking-page-wrapper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/booking-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.booking-main {
+    padding: 120px 20px 80px 20px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.booking-main .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.booking-main h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.booking-main p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+}
+
+.booking-main .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.package-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: 5px solid var(--accent-color);
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.package-card .package-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.package-card h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+}
+
+.package-card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.package-card .duration {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.package-card .description {
+    font-size: 1rem;
+    color: var(--text-color);
+    flex-grow: 1;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.package-card .select-package-btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.package-card .select-package-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* --- 6. Modal & Form Styles --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    padding: 2rem 3rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.success-message {
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    z-index: 3000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 7. Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+/* --- 8. Responsive Design --- */
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-content h2,
+    .about-content h3,
+    .about-content p {
+        text-align: center;
+    }
+
+    .about-image {
+        height: 400px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    .hero-slider .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-section-enhanced {
+        padding: 60px 20px;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .booking-main {
+        padding-top: 100px;
+    }
+
+    .booking-main h1 {
+        font-size: 2.8rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+    }
+}
