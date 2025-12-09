@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const packageCard = document.createElement('div');
                 packageCard.classList.add('package-card');
                 packageCard.innerHTML = `
-                    <i class="package-icon ${iconClass}"></i>
+                    <i class="fa-solid ${iconClass}"></i>
                     <h3>${pkg.name}</h3>
                     <p class="price">${pkg.price}</p>
                     <p class="duration"><i class="far fa-clock"></i> ${pkg.duration}</p>
@@ -124,3 +124,4 @@ document.addEventListener('DOMContentLoaded', () => {
     loadPackages(initialLang);
 
 });
+
