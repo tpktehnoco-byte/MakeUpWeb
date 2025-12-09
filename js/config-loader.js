@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to fetch and apply language data
     async function setLanguage(lang) {
         try {
-            const response = await fetch('/config.json');
+            const response = await fetch('config.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -58,4 +58,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial language setting on page load
     setLanguage(currentLanguage);
+
 });
