@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`[booking.js] Pokrećem učitavanje paketa za jezik: ${lang}`); // DIJAGNOSTIKA
 
         try {
-            const response = await fetch('/config.json');
+            const response = await fetch('config.json');
             if (!response.ok) {
                 throw new Error(`Greška pri učitavanju config.json: ${response.status}`);
             }
@@ -122,4 +122,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialLang = localStorage.getItem('selectedLanguage') || 'de';
     console.log(`[booking.js] Početno učitavanje za jezik: ${initialLang}`); // DIJAGNOSTIKA
     loadPackages(initialLang);
+
 });
