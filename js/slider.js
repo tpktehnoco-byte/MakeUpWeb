@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funkcija za učitavanje slika i kreiranje slidera
     async function initSlider() {
         try {
-            const response = await fetch('/image-list.json');
+            const response = await fetch('image-list.json');
             const imageNames = await response.json();
             console.log("Učitane slike iz JSON fajla:", imageNames);
 
@@ -105,4 +105,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlider();
 
 });
+
 
