@@ -280,7 +280,7 @@ section h2 {
 }
 
 .about-image {
-    height: 500px;
+    height: 400px;
     background-size: cover;
     background-position: center;
     border-radius: var(--border-radius);
@@ -629,11 +629,8 @@ footer {
         text-align: center;
     }
 
-    .about-image {
-        height: 400px;
-        max-width: 500px;
-        margin: 0 auto;
-    }
+    
+
 }
 
 @media (max-width: 768px) {
@@ -658,10 +655,6 @@ footer {
         padding: 60px 20px;
     }
 
-    .about-image {
-        height: 300px;
-    }
-
     .booking-main {
         padding-top: 100px;
     }
@@ -678,4 +671,5 @@ footer {
     }
 
 }
+
 
