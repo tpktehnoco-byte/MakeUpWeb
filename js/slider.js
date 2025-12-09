@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // --- NOVI KOD: Postavi prvu sliku i u "O meni" sekciji ---
             const aboutImageDiv = document.querySelector('.about-image');
-                aboutImageDiv.style.backgroundImage = 'images/slide-1.jpg';
-            }
+               aboutImageDiv.style.backgroundImage = `url('images/${imageNames[0]}')`;
+           
             // --- KRAJ NOVOG KODA ---
 
             // Kreiraj slide elemente
@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlider();
 
 });
+
 
 
 
