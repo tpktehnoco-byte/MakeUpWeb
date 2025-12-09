@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // --- NOVI KOD: Postavi prvu sliku i u "O meni" sekciji ---
             const aboutImageDiv = document.querySelector('.about-image');
-                aboutImageDiv.style.backgroundImage = `url('/images/slide-1.jpg')`;
+                aboutImageDiv.style.backgroundImage = `url('images/slide-1.jpg')`;
             }
             // --- KRAJ NOVOG KODA ---
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const slideElement = document.createElement('div');
                 slideElement.classList.add('slide');
                 if (index === 0) slideElement.classList.add('active');
-                slideElement.style.backgroundImage = `url('/images/${imageName}')`;
+                slideElement.style.backgroundImage = `url('images/${imageName}')`;
                 sliderContainer.insertBefore(slideElement, slidesContainer);
                 slides.push(slideElement);
 
@@ -105,3 +105,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initSlider();
 
 });
+
