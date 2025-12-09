@@ -280,7 +280,7 @@ section h2 {
 }
 
 .about-image {
-    height: 600px;
+    height: 500px;
     background-size: cover;
     background-position: center;
     border-radius: var(--border-radius);
@@ -678,3 +678,4 @@ footer {
     }
 
 }
+
