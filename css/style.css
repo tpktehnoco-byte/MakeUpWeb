@@ -27,7 +27,7 @@
     --font-body: 'Lato', sans-serif;
     /* Body Font */
 
-    --container-width: 1000px;
+    --container-width: 425px;
     /* Max width for content containers */
     --border-radius: 8px;
     /* Border radius for buttons and cards */
@@ -45,8 +45,9 @@
 /* Global layout: footer uvijek na dnu, sadržaj rasteže sredinu */
 html,
 body {
-    height: 100%;
-    margin: 0;
+	width = var(--container-width);
+    height: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
@@ -698,5 +699,6 @@ footer .expertise-list li i {
         margin: 2rem auto;
     }
 }
+
 
 
