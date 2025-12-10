@@ -5,8 +5,9 @@
 /* --- 1. Global Variables & Reset --- */
 :root {
     /* Boje i tipografija */
-    --text-color: whitesmoke;
-    --text-shader: firebrick 1px 2px;
+    --text-color-header: whitesmoke;
+    --text-shader-header: 4px 4px 6px black;
+    --trans-color-header: rgba(178, 34, 34, 0.184);
     /* General Text Color */
     --primary-color: whitesmoke;
     /* Primarna boja teksta na tamnoj podlozi */
@@ -14,7 +15,7 @@
     /* Sekundarna boja (tamna) */
     --background-color: rgb(42, 42, 42);
     /* Main Background */
-    --background-transparent: rgba(firebrick, 0.091);
+    --background-transparent: rgba(firebrick);
     /* Transparent Background */
     --accent-color: firebrick;
     /* Buttons and Highlights */
@@ -27,113 +28,93 @@
     --font-body: 'Lato', sans-serif;
     /* Body Font */
 
-    --container-width: 1000px;
+
     /* Max width for content containers */
-    --border-radius: 8px;
+    --border-radius: 12px;
     /* Border radius for buttons and cards */
-    --box-shadow: 5px 5px firebrick;
+    --box-shadow: 0px 3px 20px 0px firebrick;
     /* Subtle box shadow */
 }
 
 * {
+    margin: 0;
     box-sizing: border-box;
-    /* padding + border included in width/height */
-    scroll-behavior: smooth;
-    /* smooth scrolling for anchors */
 }
 
-/* Global layout: footer uvijek na dnu, sadržaj rasteže sredinu */
-html,
 body {
-    height: 100%;
-    margin: 0;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-image: url("../images/bg.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    padding-top: 7rem;
     display: flex;
     flex-direction: column;
 }
 
-body {
-    font-size: var(--font-heading-size);
-    font-family: var(--font-body);
-    background-color: var(--background-color);
-    background-image: url('../images/booking-bg.jpg');
-    background-position: center;
-    background-repeat: repeat;
-    background-size: auto;
-
-    line-height: 1.7;
-    overflow-x: hidden;
-}
-
-/* --- 2. Header & Navigation --- */
 header {
+    background-color: var(--trans-color-header);
+    box-shadow: inset var(--box-shadow);
 
 
-    background-color: var(--background-transparent);
-    backdrop-filter: blur(20px);
-    padding: 1rem;
+    backdrop-filter: blur(10px);
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 1000;
-    transition: box-shadow 0.3s ease;
-}
+    margin: 0;
+    width: 100%;
+    height: 7rem;
+    z-index: 500;
+    display: inline-block;
 
-header.scrolled {
-    box-shadow: var(--box-shadow);
 }
 
 nav {
+
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    max-width: var(--container-width);
-    margin: 0 auto;
+    text-decoration: none;
+    color: var(--text-color-header);
+    text-shadow: var(--text-shader-header);
+    font-family: var(--font-heading);
+    padding: 0rem 1rem 0rem 1rem;
+    margin: 0;
 }
 
 .logo {
-    font-family: "Baron Neue", serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: 0.8rem;
+
+    padding: 5px 0 1rem 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+
 }
 
 nav ul {
+    font-size: 1.2rem;
+    font-weight: 100;
     list-style: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
     margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1.5rem;
+    padding-inline: 1rem;
 }
 
 nav a {
-    font-family: var(--font-heading);
-    color: var(--text-color);
-    text-shadow: var(--text-shader);
+    color: white;
     text-decoration: none;
-    font-weight: 100;
-    font-size: 1.5rem;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    background-color: var(--accent-color);
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-    left: 0;
 }
 
 nav a.active {
-    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Mobile fallback */
+@media (max-width: 768px) {
+    nav ul {}
 }
 
 #language-switcher {
@@ -148,11 +129,12 @@ nav a.active {
 
 /* --- 3. Hero Slider (for index.html) --- */
 .hero-slider {
+
     position: relative;
-    height: 800px;
-    width: 100%;
+    height: 100vh;
+
     overflow: hidden;
-    margin: 9rem 0rem 0rem 0rem;
+
 
     /* prostor za fiksni header */
 }
@@ -180,31 +162,42 @@ nav a.active {
 }
 
 .hero-slider .hero-content {
-    position: absolute;
+    position: relative;
     font-family: "Baron Neue", serif;
     z-index: 2;
     text-align: center;
-    color: var(--text-color);
-    text-shadow: var(--text-shader);
+    top: 0;
+    background-color: var(--background-transparent);
+    backdrop-filter: blur(5px);
+    padding: 0%;
+    border-radius: var(--border-radius);
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-self: auto;
 
 
 }
 
 .hero-slider .hero-content h1 {
-
-    font-size: 4.5rem;
-    font-weight: 200;
+    padding: 0%;
+    font-size: 2.5rem;
     margin: 0;
     line-height: 1.2;
     letter-spacing: 0.8rem;
-    padding: 0 3rem;
+    color: var(--text-color-header);
+    text-shadow: var(--text-shader-header);
 }
 
 .hero-slider .hero-content p {
-    margin: 5rem;
-    padding: 0 2rem;
+    margin: 5%;
+    margin-bottom: 2rem;
     line-height: 2.0rem;
-    font-size: 1.8rem;
+    font-size: 1rem;
+    color: var(--text-color-header);
+    text-shadow: var(--text-shader-header);
+    text-align: center;
 }
 
 .hero-slider .prev,
@@ -264,7 +257,7 @@ nav a.active {
 
 /* --- 4. Sekcije o meni, komentari, usluge mainForm (for index.html) --- */
 section {
-    padding: 2rem 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -278,8 +271,9 @@ section h2 {
 
 .cta-button {
     display: inline-block;
-    margin-top: 15rem;
-    padding: 1rem 25px;
+    margin-top: 0;
+    padding: 20px 40px;
+
     background-color: var(--text-color);
     color: var(--accent-color);
     text-decoration: none;
@@ -301,44 +295,69 @@ section h2 {
 
 
 .about-section-enhanced .container {
-    max-width: var(--container-width);
+
     margin: 0 auto;
+
 
 }
 
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    background-image: url("../images/bg.jpg");
+    background-position: top;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    z-index: 1;
+}
+
+.about-content {
+
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 10;
 }
 
 .about-image {
-    width: 100%;
-    height: 400px;
+    margin-left: 2rem;
+    padding: 1rem 0 1rem 0rem;
+    height: 200px;
+    width: 35%;
     background-size: cover;
     background-position: center;
     border-radius: var(--border-radius);
+    opacity: 1;
 
     box-shadow: var(--box-shadow);
 }
 
 .about-content h2 {
     font-family: var(--font-heading);
-    font-size: 2.8rem;
-    color: var(--text-color);
-    text-shadow: var(--text-shader);
-    text-align: left;
-    margin-bottom: 1.5rem;
+    height: 200px;
+    width: 50%;
+    font-size: 1.8rem;
+    color: var(--text-color-header);
+    text-shadow: var(--text-shader-header);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    opacity: 1;
+    text-align: center;
+    margin: 1rem 1rem 1rem 0rem;
+    padding: 1.8rem;
 }
 
 .about-content p {
     font-size: 1.3rem;
-    color: var(--text-color);
-    text-shadow: var(--text-shader);
+    color: var(--text-color-header);
+    text-shadow: var(--text-shader-header);
     line-height: 1.8;
-    margin: 2.5rem;
-    text-align: left;
+    margin: 2rem;
+    text-align: center;
     background-color: var(--background-transparent);
     backdrop-filter: blur(5px);
     background-size: cover;
@@ -352,9 +371,12 @@ section h2 {
 .about-content h3 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    color: var(--text-color);
-    text-align: left;
+    color: var(--text-color-header);
+    text-shadow: var(--text-shader-header);
+    text-align: center;
+    align-items: center;
     margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .expertise-list {
@@ -376,6 +398,38 @@ section h2 {
     font-size: 1.2rem;
     margin-right: 1rem;
     margin-top: 3px;
+}
+
+.testimonials-section {
+    margin: 4rem 2rem;
+    background-color: var(--background-color);
+    backdrop-filter: blur(5px);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    color: var(--text-color-header);
+    text-shadow: var(--text-shader-header);
+}
+
+.testimonials-container {
+    flex-direction: column;
+    margin: 2rem;
+    background-color: var(--background-transparent);
+    backdrop-filter: blur(5px);
+    box-shadow: inset var(--box-shadow);
+    border-radius: var(--border-radius);
+    color: var(--accent-color);
+    text-shadow: var(--text-shader-header);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.testimonials-container blockquote {
+    padding: 2rem 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(25px);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius);
+    margin-bottom: auto;
 }
 
 /* --- Services Section --- */
@@ -657,7 +711,7 @@ footer .expertise-list li i {
     margin-right: 0.5rem;
 }
 
-/* --- 8. Responsive Design --- */
+/* --- 8. Responsive Design --- 
 @media (max-width: 992px) {
     .about-grid {
         grid-template-columns: 1fr;
