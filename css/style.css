@@ -6,7 +6,7 @@
 :root {
     /* Boje i tipografija */
     --text-color: whitesmoke;
-
+    --text-shader: firebrick 1px 2px;
     /* General Text Color */
     --primary-color: whitesmoke;
     /* Primarna boja teksta na tamnoj podlozi */
@@ -14,23 +14,24 @@
     /* Sekundarna boja (tamna) */
     --background-color: rgb(42, 42, 42);
     /* Main Background */
-    --background-transparent: rgba(245, 245, 245, 0.091);
+    --background-transparent: rgba(firebrick, 0.091);
     /* Transparent Background */
-    --accent-color: dodgerblue;
+    --accent-color: firebrick;
     /* Buttons and Highlights */
     --light-bg: #f9f9f9;
     /* Light Background for Sections */
 
     --font-heading: 'Playfair Display', serif;
+    --font-heading-size: 16px;
     /* Heading Font */
     --font-body: 'Lato', sans-serif;
     /* Body Font */
 
-    --container-width: 800px;
+    --container-width: 1000px;
     /* Max width for content containers */
     --border-radius: 8px;
     /* Border radius for buttons and cards */
-    --box-shadow: 0 4px 15px rgba(251, 251, 251, 0.28);
+    --box-shadow: 5px 5px firebrick;
     /* Subtle box shadow */
 }
 
@@ -51,13 +52,14 @@ body {
 }
 
 body {
+    font-size: var(--font-heading-size);
     font-family: var(--font-body);
     background-color: var(--background-color);
     background-image: url('../images/booking-bg.jpg');
-    background-position: stretch;
+    background-position: center;
     background-repeat: repeat;
     background-size: auto;
-    color: var(--text-color);
+
     line-height: 1.7;
     overflow-x: hidden;
 }
@@ -65,11 +67,11 @@ body {
 /* --- 2. Header & Navigation --- */
 header {
 
+
     background-color: var(--background-transparent);
     backdrop-filter: blur(20px);
-    padding: 1rem 2rem;
+    padding: 1rem;
     position: fixed;
-    text-shadow: rgb(42, 42, 42) 1px 1px 2px;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -89,12 +91,10 @@ nav {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text-color);
-    text-decoration: none;
-    letter-spacing: 1px;
+    font-family: "Baron Neue", serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 0.8rem;
 }
 
 nav ul {
@@ -102,14 +102,16 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
 nav a {
+    font-family: var(--font-heading);
     color: var(--text-color);
+    text-shadow: var(--text-shader);
     text-decoration: none;
-    font-weight: 400;
-    font-size: 1.1rem;
+    font-weight: 100;
+    font-size: 1.5rem;
     position: relative;
     transition: color 0.3s ease;
 }
@@ -147,10 +149,11 @@ nav a.active {
 /* --- 3. Hero Slider (for index.html) --- */
 .hero-slider {
     position: relative;
-    height: 100vh;
+    height: 800px;
     width: 100%;
     overflow: hidden;
     margin: 9rem 0rem 0rem 0rem;
+
     /* prostor za fiksni header */
 }
 
@@ -178,28 +181,30 @@ nav a.active {
 
 .hero-slider .hero-content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-family: "Baron Neue", serif;
     z-index: 2;
     text-align: center;
     color: var(--text-color);
-    padding: 0 2rem;
+    text-shadow: var(--text-shader);
+
+
 }
 
 .hero-slider .hero-content h1 {
-    font-family: var(--font-heading);
+
     font-size: 4.5rem;
-    font-weight: 700;
+    font-weight: 200;
     margin: 0;
     line-height: 1.2;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.8rem;
+    padding: 0 3rem;
 }
 
 .hero-slider .hero-content p {
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin: 1.5rem 0;
+    margin: 5rem;
+    padding: 0 2rem;
+    line-height: 2.0rem;
+    font-size: 1.8rem;
 }
 
 .hero-slider .prev,
@@ -259,7 +264,7 @@ nav a.active {
 
 /* --- 4. Sekcije o meni, komentari, usluge mainForm (for index.html) --- */
 section {
-    padding: 80px 20px;
+    padding: 2rem 0;
     text-align: center;
 }
 
@@ -273,31 +278,32 @@ section h2 {
 
 .cta-button {
     display: inline-block;
-    margin-top: 3rem;
-    padding: 15px 35px;
-    background-color: var(--accent-color);
-    color: white;
+    margin-top: 15rem;
+    padding: 1rem 25px;
+    background-color: var(--text-color);
+    color: var(--accent-color);
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 100;
+    font-size: 2rem;
     border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent-color);
+    color: var(--text-color);
 }
 
 /* --- Enhanced About Me Section --- */
-.about-section-enhanced {
-    background-color: var(--light-bg);
-    padding: 100px 20px;
-}
+
 
 .about-section-enhanced .container {
     max-width: var(--container-width);
     margin: 0 auto;
+
 }
 
 .about-grid {
@@ -308,10 +314,12 @@ section h2 {
 }
 
 .about-image {
+    width: 100%;
     height: 400px;
     background-size: cover;
     background-position: center;
     border-radius: var(--border-radius);
+
     box-shadow: var(--box-shadow);
 }
 
@@ -319,17 +327,26 @@ section h2 {
     font-family: var(--font-heading);
     font-size: 2.8rem;
     color: var(--text-color);
-    text-shadow: rgb(42, 42, 42) 1px 1px 2px;
+    text-shadow: var(--text-shader);
     text-align: left;
     margin-bottom: 1.5rem;
 }
 
 .about-content p {
-    font-size: 1.1rem;
-    color: #333;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    text-shadow: var(--text-shader);
     line-height: 1.8;
-    margin-bottom: 2.5rem;
+    margin: 2.5rem;
     text-align: left;
+    background-color: var(--background-transparent);
+    backdrop-filter: blur(5px);
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius);
+
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
 }
 
 .about-content h3 {
@@ -678,9 +695,6 @@ footer .expertise-list li i {
         font-size: 2.2rem;
     }
 
-    .about-section-enhanced {
-        padding: 60px 20px;
-    }
 
     .booking-main {
         padding-top: 100px;
@@ -700,6 +714,26 @@ footer .expertise-list li i {
 
     .modal-content {
         padding: 1.5rem;
+    }
+
+    .testimonials-container {
+        flex-direction: column;
+        margin: 2rem;
+        background-color: var(--background-transparent);
+        backdrop-filter: blur(5px);
+        box-shadow: var(--box-shadow);
+        border-radius: var(--border-radius);
+        color: var(--accent-color);
+        text-shadow: rgb(42, 42, 42) 1px 2px;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .testimonials-container blockquote {
+        padding: 2rem 2rem;
+        backdrop-filter: blur(25px);
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: var(--border-radius);
     }
 
 }
