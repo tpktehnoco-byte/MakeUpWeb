@@ -656,7 +656,25 @@ footer .expertise-list li i {
     color: var(--accent-color);
     margin-right: 0.5rem;
 }
+.testimonials-container {
+        flex-direction: column;
+        margin: 2rem;
+        background-color: var(--background-transparent);
+        backdrop-filter: blur(5px);
+        box-shadow: var(--box-shadow);
+        border-radius: var(--border-radius);
+        color: var(--accent-color);
+        text-shadow: rgb(42, 42, 42) 1px 2px;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
 
+    .testimonials-container blockquote {
+        padding: 2rem 2rem;
+        backdrop-filter: blur(25px);
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: var(--border-radius);
+	    }
 /* --- 8. Responsive Design --- */
 @media (max-width: 992px) {
     .about-grid {
@@ -677,63 +695,3 @@ footer .expertise-list li i {
     }
 }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    nav ul {
-        gap: 1.5rem;
-    }
-
-    .hero-slider .hero-content h1 {
-        font-size: 3rem;
-    }
-
-    section h2 {
-        font-size: 2.2rem;
-    }
-
-
-    .booking-main {
-        padding-top: 100px;
-    }
-
-    .booking-main h1 {
-        font-size: 2.2rem;
-    }
-
-    .package-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .modal {
-        padding: 1rem;
-    }
-
-    .modal-content {
-        padding: 1.5rem;
-    }
-
-    .testimonials-container {
-        flex-direction: column;
-        margin: 2rem;
-        background-color: var(--background-transparent);
-        backdrop-filter: blur(5px);
-        box-shadow: var(--box-shadow);
-        border-radius: var(--border-radius);
-        color: var(--accent-color);
-        text-shadow: rgb(42, 42, 42) 1px 2px;
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
-
-    .testimonials-container blockquote {
-        padding: 2rem 2rem;
-        backdrop-filter: blur(25px);
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: var(--border-radius);
-    }
-
-}
