@@ -73,8 +73,9 @@ header {
     backdrop-filter: blur(20px);
     padding: 1rem;
     position: fixed;
-    width: 100%;
-    top: 0;
+    width: var(--container.width);
+    height: auto;
+	top: 0;
     z-index: 1000;
     transition: box-shadow 0.3s ease;
 }
@@ -89,7 +90,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     max-width: var(--container-width);
-    margin: 0 auto;
+   height: auto;
+	margin: 0 auto;
 }
 
 .logo {
@@ -699,6 +701,7 @@ footer .expertise-list li i {
         margin: 2rem auto;
     }
 }
+
 
 
 
