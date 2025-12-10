@@ -653,8 +653,10 @@ footer .expertise-list li i {
         text-align: center;
     }
 
-    .hero-slider .hero-content h1 {
-        font-size: 3.5rem;
+    .about-image {
+        height: 400px;
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
@@ -698,42 +700,6 @@ footer .expertise-list li i {
 
     .modal-content {
         padding: 1.5rem;
-        max-width: 90vw;
     }
 
-    footer .expertise-list {
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 425px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .about-content h2,
-    .about-content h3,
-    .about-content p {
-        text-align: center;
-    }
-
-    .hero-slider .hero-content h1 {
-        font-size: 2.4rem;
-        margin: 4rem;
-    }
-
-    .booking-main h1 {
-        font-size: 2rem;
-
-    }
-
-    .booking-main p {
-        font-size: 1rem;
-        margin-bottom: 3rem;
-    }
-
-    .package-card .price {
-        font-size: 2rem;
-    }
 }
