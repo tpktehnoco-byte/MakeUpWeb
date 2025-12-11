@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`[booking.js] Učitano paketa: ${packages.length}`); // DIJAGNOSTIKA
 
             const packageIcons = {
-                'soft-glam': 'fa-sparkles',
-                'full-glam': 'fa-gem',
-                'bridal-trial': 'fa-heart',
-                'bridal-day': 'fa-crown'
+                'soft-glam': 'fas fa-sparkles',
+                'full-glam': 'fas fa-gem',
+                'bridal-trial': 'fas fa-heart',
+                'bridal-day': 'fas fa-crown'
             };
 
             packages.forEach(pkg => {
@@ -124,4 +124,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadPackages(initialLang);
 
 });
+
 
