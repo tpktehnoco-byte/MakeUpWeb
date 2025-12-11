@@ -7,6 +7,7 @@
     /* Boje i tipografija */
     --text-color-header: whitesmoke;
     --text-shader-header: 4px 4px 6px black;
+    --tekst-shader-A: 4px 4px 6px firebrick;
     --trans-color-header: rgba(178, 34, 34, 0.184);
     /* General Text Color */
     --primary-color: whitesmoke;
@@ -15,7 +16,7 @@
     /* Sekundarna boja (tamna) */
     --background-color: rgb(42, 42, 42);
     /* Main Background */
-    --background-transparent: rgba(firebrick);
+    --background-transparent: rgba(178, 34, 34, 0.1);
     /* Transparent Background */
     --accent-color: firebrick;
     /* Buttons and Highlights */
@@ -53,8 +54,8 @@ body {
 }
 
 header {
-    background-color: var(--trans-color-header);
-    box-shadow: inset var(--box-shadow);
+    background-color: var(--background-transparent);
+    /* box-shadow: inset var(--box-shadow);*/
 
 
     backdrop-filter: blur(10px);
