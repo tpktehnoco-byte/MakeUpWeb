@@ -13,26 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funkcija za učitavanje slika i kreiranje slidera
     async function initSlider() {
         try {
-            const response = await fetch('image-list.json');
+            const response = await fetch('/image-list.json');
             const imageNames = await response.json();
-            console.log("Učitane slike iz JSON fajla:", imageNames);
 
             if (imageNames.length === 0) return;
-
-            // --- NOVI KOD: Postavi prvu sliku i u "O meni" sekciji ---
-            const aboutImageDiv = document.querySelector('.about-image');
-            aboutImageDiv.style.backgroundImage = `url('images/about.jpg')`;
-
-
-
-            // --- KRAJ NOVOG KODA ---
 
             // Kreiraj slide elemente
             imageNames.forEach((imageName, index) => {
                 const slideElement = document.createElement('div');
                 slideElement.classList.add('slide');
-                if (index === 0) slideElement.classList.add('active');
-                slideElement.style.backgroundImage = `url('images/${imageName}')`;
+                if (index === 0) slideElement.classList.add('active'); // Prvi slide je aktivan
+                slideElement.style.backgroundImage = `url('/images/${imageName}')`;
                 sliderContainer.insertBefore(slideElement, slidesContainer);
                 slides.push(slideElement);
 
@@ -105,11 +96,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Pokreni slider
     initSlider();
-
 });
-
-
-
-
-
-

@@ -1,159 +1,156 @@
 ﻿/* ============================================================================ */
-/*                           PAINTED BY SARA - MAIN CSS                        */
+/*            PAINTED BY SARA - STATIČKA VERZIJA                    */
 /* ============================================================================ */
 
-/* --- 1. Global Variables & Reset --- */
 :root {
-    /* Boje i tipografija */
-    --text-color-header: whitesmoke;
-    --text-shader-header: 4px 4px 6px black;
-    --tekst-shader-A: 4px 4px 6px firebrick;
-    --trans-color-header: rgba(178, 34, 34, 0.184);
-    /* General Text Color */
-    --primary-color: whitesmoke;
-    /* Primarna boja teksta na tamnoj podlozi */
-    --secondary-color: rgb(42, 42, 42);
-    /* Sekundarna boja (tamna) */
-    --background-color: rgb(42, 42, 42);
-    /* Main Background */
-    --background-transparent: rgba(178, 34, 34, 0.1);
-    /* Transparent Background */
+    --primary-color: firebrick;
+    --secondary-color: whitesmoke;
+    --trans: rgba(2, 1, 1, 0.275);
     --accent-color: firebrick;
-    /* Buttons and Highlights */
-    --light-bg: #f9f9f9;
-    /* Light Background for Sections */
-
+    --text-color: #cccccc;
     --font-heading: 'Playfair Display', serif;
-    --font-heading-size: 16px;
-    /* Heading Font */
     --font-body: 'Lato', sans-serif;
-    /* Body Font */
-
-
-    /* Max width for content containers */
-    --border-radius: 12px;
-    /* Border radius for buttons and cards */
-    --box-shadow: 0px 3px 20px 0px firebrick;
-    /* Subtle box shadow */
+    --transition: all 0.3s ease-in-out;
 }
 
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-color);
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
     line-height: 1.6;
-    background-image: url("../images/bg.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
-    padding-top: 7rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
+/* --- Header & Navigation --- */
 header {
-    background-color: var(--background-transparent);
-    /* box-shadow: inset var(--box-shadow);*/
-
-
-    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
-    margin: 0;
+    left: 0;
+    max-height: 4rem;
+    background-image: url('../images/bg.jpg');
+    background-size: auto;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 7rem;
-    z-index: 500;
-    display: inline-block;
+    height: 4rem;
 
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 nav {
-
+    font-size: 24px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    text-decoration: none;
-    color: var(--text-color-header);
-    text-shadow: var(--text-shader-header);
-    font-family: var(--font-heading);
-    padding: 0rem 1rem 0rem 1rem;
-    margin: 0;
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(20px);
+
 }
+
+
 
 .logo {
-
-    padding: 5px 0 1rem 0;
-    margin: 0;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: 0.2rem;
-
+    background: none;
+    padding: 0;
 }
 
-nav ul {
-
-    font-weight: 100;
-    list-style: none;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: space-around;
-    margin: 0;
-    padding-inline: 0.5rem;
+.logo-img {
+    height: 3.5rem;
+    width: auto;
+    display: block;
 }
+
+
 
 nav a {
-    color: white;
+    color: var(--secondary-color);
+    font-size: 24px;
+
     text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+nav a:hover::after,
+nav a.active {
+    transform: scaleX(1);
 }
 
 nav a.active {
-    border-bottom: 2px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
-/* Mobile fallback */
-@media (max-width: 768px) {
-    nav ul {}
+main {
+    margin-top: 4rem;
 }
 
 #language-switcher {
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--secondary-color);
+    color: var(--primary-color);
     padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    font-family: var(--font-body);
-    background-color: var(--light-bg);
-    color: #333;
+    border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
 }
 
-/* --- 3. Hero Slider (for index.html) --- */
+/* --- Hero Slider Styles --- */
 .hero-slider {
-
     position: relative;
-    height: 100vh;
-
+    height: 60vh;
     overflow: hidden;
-
-
-    /* prostor za fiksni header */
-}
-
-.hero-slider::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    box-shadow: 0 0 15px 10px firebrick;
+    margin-top: 0;
+    /* Prostor za fiksni header */
 }
 
 .hero-slider .slide {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
@@ -162,69 +159,33 @@ nav a.active {
     opacity: 1;
 }
 
+/* Zadržavamo sadržaj preko slidera */
 .hero-slider .hero-content {
     position: relative;
-    font-family: "Baron Neue", serif;
-    z-index: 2;
-    text-align: center;
-    top: 1rem;
-    background-color: var(--background-transparent);
-    backdrop-filter: blur(5px);
-    padding: 0%;
-    border-radius: var(--border-radius);
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-self: auto;
-
-
+    z-index: 1;
 }
 
-.hero-slider .hero-content h1 {
-    padding: 0%;
-    font-size: 2.5rem;
-    margin: 2rem 0;
-    line-height: 1.2;
-    letter-spacing: 0.8rem;
-    color: var(--text-color-header);
-    text-shadow: var(--text-shader-header);
-}
-
-.hero-slider .hero-content p {
-    margin: 5%;
-    margin-bottom: 2rem;
-    line-height: 2.0rem;
-    font-size: 1.2rem;
-    color: var(--text-color-header);
-    text-shadow: var(--text-shader-header);
-    text-align: center;
-}
-
+/* Strelice za navigaciju */
 .hero-slider .prev,
 .hero-slider .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 24px;
     transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
     user-select: none;
     background-color: rgba(0, 0, 0, 0.2);
-    padding: 10px 15px;
-    z-index: 3;
 }
 
 .hero-slider .next {
-    right: 20px;
+    right: 0;
     border-radius: 3px 0 0 3px;
-}
-
-.hero-slider .prev {
-    left: 20px;
-    border-radius: 0 3px 3px 0;
 }
 
 .hero-slider .prev:hover,
@@ -232,19 +193,20 @@ nav a.active {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Indikatori (tačkice) */
 .hero-slider .slider-dots {
     position: absolute;
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 1;
 }
 
 .hero-slider .dot {
     cursor: pointer;
     height: 12px;
     width: 12px;
-    margin: 5px 5px;
+    margin: 0 5px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     display: inline-block;
@@ -256,539 +218,78 @@ nav a.active {
     background-color: var(--accent-color);
 }
 
-/* --- 4. Sekcije o meni, komentari, usluge mainForm (for index.html) --- */
-section {
-    padding: 0;
-    text-align: center;
-}
-
-section h2 {
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-}
-
 .cta-button {
     display: inline-block;
-    margin-top: 0;
-    padding: 20px 40px;
-
-    background-color: var(--text-color);
-    color: var(--accent-color);
+    padding: 1rem 3rem;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
     text-decoration: none;
-    font-weight: 100;
-    font-size: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    background-color: var(--accent-color);
-    color: var(--text-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-/* --- Enhanced About Me Section --- */
+/* --- About Section --- */
+.about {
+    padding: 8rem 2rem;
+    text-align: center;
+}
 
-
-.about-section-enhanced .container {
-
+.about p {
+    max-width: 800px;
     margin: 0 auto;
-
-
-}
-
-.about-grid {
-    background-image: url("../images/bg.jpg");
-    background-position: top;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    z-index: 1;
-}
-
-.about-content {
-
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    z-index: 10;
-}
-
-.about-image {
-    margin-left: 2rem;
-    padding: 1rem 0 1rem 0rem;
-    height: 200px;
-    width: 35%;
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--border-radius);
-    opacity: 1;
-
-    box-shadow: var(--box-shadow);
-}
-
-.about-content h2 {
-    font-family: var(--font-heading);
-    height: 200px;
-    width: 45%;
-    font-size: 1.6rem;
-    color: var(--text-color-header);
-    text-shadow: var(--text-shader-header);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-    opacity: 1;
-    text-align: center;
-    margin: 1rem 1rem 1rem 0rem;
-    padding: 1rem 0.8rem;
-}
-
-.about-content p {
-    font-size: 1.3rem;
-    color: var(--text-color-header);
-    text-shadow: var(--text-shader-header);
+    font-size: 1.1rem;
     line-height: 1.8;
-    margin: 2rem;
-    text-align: center;
-    background-color: var(--background-transparent);
-    backdrop-filter: blur(5px);
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--border-radius);
-
-    box-shadow: var(--box-shadow);
-    padding: 2rem;
 }
 
-.about-content h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--text-color-header);
-    text-shadow: var(--text-shader-header);
-    text-align: center;
+/* --- Footer --- */
+footer {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 1.5rem;
-    width: 100%;
-}
-
-.expertise-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.expertise-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
-    color: #333;
-    font-size: 1rem;
-}
-
-.expertise-list li i {
-    color: var(--accent-color);
-    font-size: 1.2rem;
-    margin-right: 1rem;
-    margin-top: 3px;
-}
-
-.testimonials-section {
-    margin: 4rem 2rem;
-    background-color: var(--background-color);
-    backdrop-filter: blur(5px);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-    color: var(--text-color-header);
-    text-shadow: var(--text-shader-header);
-}
-
-.testimonials-container {
-    flex-direction: column;
-    margin: 2rem;
-    background-color: var(--background-transparent);
-    backdrop-filter: blur(5px);
-    box-shadow: inset var(--box-shadow);
-    border-radius: var(--border-radius);
-    color: var(--accent-color);
-    text-shadow: var(--text-shader-header);
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.testimonials-container blockquote {
-    padding: 2rem 2rem;
-    margin: 2rem 0;
-    backdrop-filter: blur(25px);
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: var(--border-radius);
-    margin-bottom: auto;
-}
-
-/* --- Services Section --- */
-.services-section .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.service-card {
-    background-color: var(--light-bg);
-    padding: 2.5rem 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-.service-card i {
-    font-size: 3rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
-.service-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: #222;
-    margin-bottom: 0.5rem;
-}
-
-.service-card p {
-    color: #555;
-}
-
-/* --- 5. Booking Page Specific Styles (for booking.html) --- */
-.booking-page-wrapper {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/booking-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    /* background-attachment: fixed;  uklonjeno radi mobilne kompatibilnosti */
-}
-
-.booking-main {
-    flex: 1;
-    padding: 120px 20px 80px 20px;
-    text-align: center;
+    padding: 0rem 1rem;
     color: var(--text-color);
-}
-
-.booking-main .container {
-    max-width: var(--container-width);
-    margin: 4rem auto;
-}
-
-.booking-main h1 {
-    font-family: var(--font-heading);
-    font-size: 3.5rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.booking-main p {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 700px;
-    margin: 0 auto 4rem auto;
-}
-
-.booking-main .packages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-.package-card {
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    background-clip: padding-box;
-    border-radius: var(--border-radius);
-    padding: 2.5rem 2rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border-top: 5px solid var(--accent-color);
-    flex: 1 1 auto;
-}
-
-.package-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-}
-
-.package-card .package-icon {
-    font-size: 3rem;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-}
-
-.package-card h3 {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    color: #222;
-    margin: 0 0 1rem 0;
-}
-
-.package-card .price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--accent-color);
-    margin: 0;
-}
-
-.package-card .duration {
-    color: #555;
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-}
-
-.package-card .description {
-    font-size: 1rem;
-    color: #444;
-    flex-grow: 1;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-.package-card .select-package-btn {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-transform: uppercase;
+    font-size: 0.8rem;
     letter-spacing: 1px;
 }
 
-.package-card .select-package-btn:hover {
-    background-color: #1e72c6;
-    /* slightly darker dodgerblue */
-    color: white;
-    transform: scale(1.05);
-}
+/* --- Responsive Design --- */
+@media (min-width: 768px) {
+    html {
 
-/* --- 6. Modal & Form Styles --- */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: var(--light-bg);
-    color: #222;
-    padding: 2rem 3rem;
-    border-radius: var(--border-radius);
-    width: 100%;
-    max-width: 700px;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: left;
-}
-
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    color: #222;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: var(--border-radius);
-    font-family: var(--font-body);
-    font-size: 1rem;
-    box-sizing: border-box;
-    color: #222;
-    background-color: white;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #1e72c6;
-    color: white;
-}
-
-.success-message {
-    display: none;
-    position: fixed;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: var(--border-radius);
-    z-index: 3000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* --- 7. Footer --- */
-footer {
-    margin-top: auto;
-    /* gura footer na dno stranice */
-    text-align: center;
-    padding: 2rem;
-    background-color: #111;
-    color: var(--text-color);
-}
-
-footer .expertise-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-footer .expertise-list li {
-    display: flex;
-    align-items: center;
-    font-size: 0.95rem;
-    color: var(--text-color);
-}
-
-footer .expertise-list li i {
-    color: var(--accent-color);
-    margin-right: 0.5rem;
-}
-
-/* --- 8. Responsive Design --- 
-@media (max-width: 992px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        display: flex;
+        justify-content: center;
     }
 
-    .about-content h2,
-    .about-content h3,
-    .about-content p {
-        text-align: center;
+    header {
+        width: 768px;
+        left: auto;
     }
 
-    .about-image {
-        height: 400px;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 1rem;
+    body {
+        width: 768px;
     }
 
     nav ul {
         gap: 1.5rem;
     }
 
-    .hero-slider .hero-content h1 {
-        font-size: 3rem;
+    .logo-img {
+        height: 35px;
     }
 
-    section h2 {
-        font-size: 2.2rem;
+    .hero {
+        padding: 0 1rem;
     }
 
-
-    .booking-main {
-        padding-top: 100px;
+    .about {
+        padding: 4rem 1rem;
     }
-
-    .booking-main h1 {
-        font-size: 2.2rem;
-    }
-
-    .package-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .modal {
-        padding: 1rem;
-    }
-
-    .modal-content {
-        padding: 1.5rem;
-    }
-
-    .testimonials-container {
-        flex-direction: column;
-        margin: 2rem;
-        background-color: var(--background-transparent);
-        backdrop-filter: blur(5px);
-        box-shadow: var(--box-shadow);
-        border-radius: var(--border-radius);
-        color: var(--accent-color);
-        text-shadow: rgb(42, 42, 42) 1px 2px;
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
-
-    .testimonials-container blockquote {
-        padding: 2rem 2rem;
-        backdrop-filter: blur(25px);
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: var(--border-radius);
-    }
-
 }
