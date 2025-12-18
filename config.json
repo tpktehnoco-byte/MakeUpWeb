@@ -215,36 +215,64 @@
       "introText": "Select the package that best suits your needs...",
       "formTitle": "Booking Form",
       "successMessage": "Your request has been successfully sent...",
-      "packages": [
-        {
-          "id": "soft-glam",
-          "name": "Soft Glam",
-          "price": "70€",
-          "duration": "1.5 hours",
-          "description": "Perfect for a night out, birthdays, or when you just want to look and feel your best without too much makeup. Focus on a radiant, glowing complexion and soft tones."
-        },
-        {
-          "id": "full-glam",
-          "name": "Full Glam",
-          "price": "90€",
-          "duration": "2 hours",
-          "description": "A more dramatic and bolder look, ideal for parties and special events. Includes contouring, emphasized eyes, and perfect lips."
-        },
-        {
-          "id": "bridal-trial",
-          "name": "Bridal Makeup - Trial",
-          "price": "60€",
-          "duration": "1.5 hours",
-          "description": "A trial version of your wedding makeup. This is crucial for finalizing the look, discussing wishes, and ensuring you are 100% satisfied."
-        },
-        {
-          "id": "bridal-day",
-          "name": "Bridal Makeup - Wedding Day",
-          "price": "150€",
-          "duration": "2 hours",
-          "description": "Full preparation for your big day. Includes a detailed consultation, skin preparation, and a flawless look that will last through tears, smiles, and dancing. Travel to the location is included in the price for the city area."
-        }
-      ]
+    "packages": [
+    {
+      "id": "KLASSISCHES BRAUT MAKE-UP",
+      "name": "CLASSIC BRIDAL MAKE-UP",
+      "price": "260€",
+      "duration": "1.5 hours",
+      "description": "An elegant, refined and long-lasting bridal look with carefully prepared skin and individually applied lashes for a naturally flawless finish."
+    },
+    {
+      "id": "GLAM BRIDAL MAKE-UP",
+      "name": "GLAM BRIDAL MAKE-UP",
+      "price": "300€",
+      "duration": "2 hours",
+      "description": "A luxurious glam bridal look that enhances your eyes, sculpts flawless contours, and delivers a perfect, long-lasting finish."
+    },
+    {
+      "id": "bridal-trial",
+      "name": "BRIDAL MAKE-UP TRIAL",
+      "price": "200€",
+      "duration": "1.5 hours",
+      "description": "A trial session to perfect your bridal look, discuss your wishes, and ensure complete confidence before your big day."
+    },
+    {
+      "id": "BRIDAL PARTY MAKE-UP",
+      "name": "BRIDAL PARTY MAKE-UP",
+      "price": "130€ p.P.",
+      "duration": "45 min – 1 hour",
+      "description": "The perfect makeup package for your maid of honor, mother, or sister, ensuring they feel glamorous and celebration-ready."
+    },
+    {
+      "id": "CLASSIC MAKEUP",
+      "name": "CLASSIC SET MAKE-UP",
+      "price": "150€",
+      "duration": "1 hour",
+      "description": "A simple and elegant makeup for photoshoots that enhances your natural beauty and always looks flawless."
+    },
+    {
+      "id": "GLAM MAKEUP",
+      "name": "GLAM SET MAKE-UP",
+      "price": "160€",
+      "duration": "1.5 hours",
+      "description": "A bold and striking glam look that enhances your beauty and stands out perfectly on camera."
+    },
+    {
+      "id": "HALF SET DAY",
+      "name": "HALF SET DAY",
+      "price": "650€",
+      "duration": "4–5 hours",
+      "description": "Half-day on-set support with continuous touch-ups to keep your look flawless throughout the shoot."
+    },
+    {
+      "id": "FULL SET DAY",
+      "name": "FULL SET DAY",
+      "price": "1.400€",
+      "duration": "8–9 hoours",
+      "description": "Full-day on-set support with constant touch-ups to ensure your look remains flawless from start to finish."
+    }
+  ]
     },
     "gallery": {
       "gallery.pageTitle": "Painted by Sara - Galerie",
@@ -401,4 +429,5 @@
       "gallery.albumName": "Album"
     }
   }
+
 }
