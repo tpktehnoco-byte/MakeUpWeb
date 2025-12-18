@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funkcija za učitavanje slika i kreiranje slidera
     async function initSlider() {
         try {
-            const response = await fetch('../image-list.json');
+            const response = await fetch('image-list.json');
             const imageNames = await response.json();
 
             if (imageNames.length === 0) return;
@@ -97,4 +97,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Pokreni slider
     initSlider();
+
 });
