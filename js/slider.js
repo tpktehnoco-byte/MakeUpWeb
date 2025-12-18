@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Funkcija za učitavanje slika i kreiranje slidera
     async function initSlider() {
         try {
-            const response = await fetch('/image-list.json');
+            const response = await fetch('../image-list.json');
             const imageNames = await response.json();
 
             if (imageNames.length === 0) return;
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const slideElement = document.createElement('div');
                 slideElement.classList.add('slide');
                 if (index === 0) slideElement.classList.add('active'); // Prvi slide je aktivan
-                slideElement.style.backgroundImage = `url('/images/${imageName}')`;
+                slideElement.style.backgroundImage = `url('../images/${imageName}')`;
                 sliderContainer.insertBefore(slideElement, slidesContainer);
                 slides.push(slideElement);
 
