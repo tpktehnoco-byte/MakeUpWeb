@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const slideElement = document.createElement('div');
                 slideElement.classList.add('slide');
                 if (index === 0) slideElement.classList.add('active'); // Prvi slide je aktivan
-                slideElement.style.backgroundImage = `url('../images/${imageName}')`;
+                slideElement.style.backgroundImage = `url('images/${imageName}')`;
                 sliderContainer.insertBefore(slideElement, slidesContainer);
                 slides.push(slideElement);
 
