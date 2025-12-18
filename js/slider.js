@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSlide = 0;
     let slideInterval;
 
+
     // Funkcija za učitavanje slika i kreiranje slidera
     async function initSlider() {
         try {
