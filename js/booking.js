@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="price">${pkg.price}</p>
                     <p class="duration"><i class="far fa-clock"></i> ${pkg.duration}</p>
                     <p class="description">${pkg.description}</p>
-                    <button class="select-package-btn" data-package-id="${pkg.id}">${currentTranslations.global.navBooking}</button>
+                    <button class="book-btn" data-package-id="${pkg.id}">${currentTranslations.global.navBooking}</button>
                 `;
                 packagesContainer.appendChild(packageCard);
             });
 
-            document.querySelectorAll('.select-package-btn').forEach(button => {
+            document.querySelectorAll('.book-btn').forEach(button => {
                 button.addEventListener('click', openBookingModal);
             });
 

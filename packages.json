@@ -1,0 +1,36 @@
+{
+    "de": {
+        "booking": {
+            "packages": [
+                {
+                    "id": "soft-glam",
+                    "name": "Soft Glam",
+                    "price": "70€",
+                    "duration": "1.5 Stunden",
+                    "description": "Perfekt für einen Abend aus, Geburtstage oder wenn Sie einfach nur aussehen und sich fühlen möchten, ohne zu viel Make-up. Fokus auf ein leuchtendes, strahlendes Hautbild und weiche Töne."
+                },
+                {
+                    "id": "full-glam",
+                    "name": "Full Glam",
+                    "price": "90€",
+                    "duration": "2 Stunden",
+                    "description": "Ein dramatischerer und mutigerer Look, ideal für Partys und besondere Anlässe. Beinhaltet Konturierung, betonte Augen und perfekte Lippen."
+                },
+                {
+                    "id": "bridal-trial",
+                    "name": "Braut-Make-up - Probetermin",
+                    "price": "60€",
+                    "duration": "1.5 Stunden",
+                    "description": "Eine Testversion Ihres Hochzeits-Make-ups. Dies ist entscheidend, um den Look zu finalisieren, Wünsche zu besprechen und sicherzustellen, dass Sie zu 100 % zufrieden sind."
+                },
+                {
+                    "id": "bridal-day",
+                    "name": "Braut-Make-up - Hochzeitstag",
+                    "price": "150€",
+                    "duration": "2 Stunden",
+                    "description": "Die vollständige Vorbereitung für Ihren großen Tag. Beinhaltet eine detaillierte Beratung, die Vorbereitung der Haut und einen makellosen Look, der durch Tränen, Lächeln und Tanz hält. Die Anreise zum Ort ist im Preis für das Stadtgebiet enthalten."
+                }
+            ]
+        }
+    }
+}

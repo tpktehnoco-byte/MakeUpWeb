@@ -64,43 +64,87 @@
     },
     "booking": {
       "pageTitle": "Booking & Preise",
-      "introText": "Wählen Sie das Paket, das am besten zu Ihren Bedürfnissen passt. Für weitere Fragen oder personalisierte Wünsche kontaktieren Sie mich bitte.",
+      "introText": "Wählen Sie das passende Paket für Ihren Anlass. Für individuelle Wünsche, Gruppenbuchungen oder Hochzeiten kontaktieren Sie mich gerne persönlich.",
       "formTitle": "Reservierungsformular",
-      "successMessage": "Ihre Anfrage wurde erfolgreich gesendet! Sie erhalten in den nächsten 24 Stunden eine Bestätigungs-E-Mail mit den Details.",
+      "successMessage": "Ihre Anfrage wurde erfolgreich gesendet! Sie erhalten innerhalb von 24 Stunden eine Bestätigungs-E-Mail mit allen Details.",
       "packages": [
         {
-          "id": "soft-glam",
-          "name": "Soft Glam",
-          "price": "70€",
-          "duration": "1.5 Stunden",
-          "description": "Perfekt für einen Abend aus, Geburtstage oder wenn Sie einfach nur aussehen und sich fühlen möchten, ohne zu viel Make-up. Fokus auf ein leuchtendes, strahlendes Hautbild und weiche Töne."
+          "id": "classic-makeup",
+          "name": "Classic Make-up",
+          "price": "120€",
+          "duration": "ca. 1 Stunde",
+          "description": "Ein schlichtes, elegantes Make-up – ideal für Shootings, Events oder Business. Natürlich, zeitlos und perfekt ausbalanciert."
         },
         {
-          "id": "full-glam",
-          "name": "Full Glam",
-          "price": "90€",
-          "duration": "2 Stunden",
-          "description": "Ein dramatischerer und mutigerer Look, ideal für Partys und besondere Anlässe. Beinhaltet Konturierung, betonte Augen und perfekte Lippen."
+          "id": "glam-makeup",
+          "name": "Glam Make-up",
+          "price": "160€",
+          "duration": "ca. 1.5 Stunden",
+          "description": "Ein intensiver, ausdrucksstarker Glam-Look mit Fokus auf Augen, Konturen und makelloses Finish – perfekt für besondere Anlässe."
+        },
+        {
+          "id": "bridal-classic",
+          "name": "Klassisches Braut-Make-up",
+          "price": "260€",
+          "duration": "ca. 2 Stunden",
+          "description": "Eleganter, langanhaltender Bridal-Look inklusive Hautvorbereitung und Einzelwimpern – zeitlos schön für Ihren großen Tag."
+        },
+        {
+          "id": "bridal-glam",
+          "name": "Glam Bridal Make-up",
+          "price": "300€",
+          "duration": "ca. 2–2.5 Stunden",
+          "description": "Hochglamouröser Premium-Brautlook mit intensiven Augen, perfekter Kontur und luxuriösem Finish."
         },
         {
           "id": "bridal-trial",
-          "name": "Braut-Make-up - Probetermin",
-          "price": "60€",
-          "duration": "1.5 Stunden",
-          "description": "Eine Testversion Ihres Hochzeits-Make-ups. Dies ist entscheidend, um den Look zu finalisieren, Wünsche zu besprechen und sicherzustellen, dass Sie zu 100 % zufrieden sind."
+          "name": "Braut-Make-up Probetermin",
+          "price": "200€",
+          "duration": "ca. 1.5 Stunden",
+          "description": "Probestyling inklusive Beratung und Analyse, um Ihren Hochzeitslook perfekt auf Kleid, Typ und Konzept abzustimmen."
         },
         {
-          "id": "bridal-day",
-          "name": "Braut-Make-up - Hochzeitstag",
-          "price": "150€",
-          "duration": "2 Stunden",
-          "description": "Die vollständige Vorbereitung für Ihren großen Tag. Beinhaltet eine detaillierte Beratung, die Vorbereitung der Haut und einen makellosen Look, der durch Tränen, Lächeln und Tanz hält. Die Anreise zum Ort ist im Preis für das Stadtgebiet enthalten."
+          "id": "bridal-party",
+          "name": "Bridal Party Make-up",
+          "price": "130€ pro Person",
+          "duration": "ca. 1 Stunde pro Person",
+          "description": "Professionelles Make-up für Brautjungfern, Trauzeuginnen oder Gäste – harmonisch abgestimmt auf das Hochzeitskonzept."
+        },
+        {
+          "id": "signature-touch-up",
+          "name": "Signature Touch-Up / Evening Glam",
+          "price": "300€",
+          "duration": "individuell",
+          "description": "Luxusservice für Touch-ups während des Tages oder komplette Evening-Glam-Transformation."
+        },
+        {
+          "id": "half-set-day",
+          "name": "Half Set Day",
+          "price": "650€",
+          "duration": "halbtägig",
+          "description": "Halbtägige Set-Begleitung mit kontinuierlichen Touch-ups für ein makelloses Ergebnis vor Kamera und Licht."
+        },
+        {
+          "id": "full-set-day",
+          "name": "Full Set Day",
+          "price": "1.400€",
+          "duration": "ganztägig",
+          "description": "Ganztägige Set-Begleitung – stellt sicher, dass das Make-up jede Szene, jedes Licht und jede Bewegung perfekt übersteht."
         }
       ]
     },
     "gallery": {
-      "pageTitle": "Galerie",
-      "introText": "Bald verfügbar..."
+      "gallery.pageTitle": "Painted by Sara - Galerie",
+      "gallery.title": "Galerija",
+      "gallery.loading": "Učitavanje galerije...",
+      "gallery.noAlbums": "Nema albuma za prikaz.",
+      "gallery.error": "Greška pri učitavanju galerije.",
+      "gallery.loadingAlbum": "Učitavanje albuma...",
+      "gallery.errorAlbum": "Greška pri učitavanju albuma.",
+      "gallery.prev": "Prethodna",
+      "gallery.next": "Sljedeća",
+      "gallery.close": "Zatvori",
+      "gallery.albumName": "Album"
     }
   },
   "en": {
@@ -203,8 +247,17 @@
       ]
     },
     "gallery": {
-      "pageTitle": "Gallery",
-      "introText": "Coming soon..."
+      "gallery.pageTitle": "Painted by Sara - Galerie",
+      "gallery.title": "Galerija",
+      "gallery.loading": "Učitavanje galerije...",
+      "gallery.noAlbums": "Nema albuma za prikaz.",
+      "gallery.error": "Greška pri učitavanju galerije.",
+      "gallery.loadingAlbum": "Učitavanje albuma...",
+      "gallery.errorAlbum": "Greška pri učitavanju albuma.",
+      "gallery.prev": "Prethodna",
+      "gallery.next": "Sljedeća",
+      "gallery.close": "Zatvori",
+      "gallery.albumName": "Album"
     }
   },
   "exyu": {
@@ -277,38 +330,75 @@
       "successMessage": "Vaš zahtev je uspešno poslat...",
       "packages": [
         {
-          "id": "soft-glam",
-          "name": "Soft Glam",
-          "price": "70€",
+          "id": "KLASSISCHES BRAUT MAKE-UP",
+          "name": "KLASIČNI BRIDAL MAKE-UP",
+          "price": "260€",
           "duration": "1.5 sata",
-          "description": "Savršen za izlaske, rođendane ili kada želite da izgledate i osećate se najbolje bez previše šminke. Fokus na svetloj, sjajnoj koži i mekim tonovima."
+          "description": "Elegantan i dugotrajan bridal look uključujući pripremu kože i individualne trepavice."
         },
         {
-          "id": "full-glam",
-          "name": "Full Glam",
-          "price": "90€",
+          "id": "GLAM BRIDAL MAKE-UP",
+          "name": "GLAM BRIDAL MAKE-UP",
+          "price": "300€",
           "duration": "2 sata",
-          "description": "Dramatičniji i smeliji izgled, idealan za proslave i specijalne događaje. Uključuje konturiranje, naglašene oči i savršene usne."
+          "description": "Luksuzni glam bridal look s naglašenim očima, savršenim konturama i besprijekornim završetkom."
         },
         {
           "id": "bridal-trial",
-          "name": "Vjenčana Šminka - Probna",
-          "price": "60€",
+          "name": "PROBA BRIDAL MAKE-UPA",
+          "price": "200€",
           "duration": "1.5 sata",
-          "description": "Probna verzija vaše vjenčane šminke. Ovo je ključno za finalizovanje izgleda, diskusiju o željama i osiguravanje da ste 100% zadovoljni."
+          "description": "Probni termin za finalizaciju bridal looka, razgovor o željama i potpunu sigurnost prije velikog dana."
         },
         {
-          "id": "bridal-day",
-          "name": "Vjenčana Šminka - Dan Vjenčanja",
+          "id": "BRIDAL PARTY MAKE-UP",
+          "name": "BRIDAL PARTY MAKE-UP",
+          "price": "130€ po osobi",
+          "duration": "1.5 sata po osobi",
+          "description": "Savršen paket za šminkanje kume, mame ili sestre."
+        },
+        {
+          "id": "CLASSIC MAKEUP",
+          "name": "KLASIČNI MAKE-UP",
           "price": "150€",
-          "duration": "2 sata",
-          "description": "Potpuna priprema za vaš veliki dan. Uključuje detaljnu konsultaciju, pripremu kože i besprekoran izgled koji će izdržati kroz suze, osmijehe i ples. Dolazak na lokaciju je uključen u cijenu za područje Grada."
+          "duration": "1 sat",
+          "description": "Jednostavan i elegantan shooting make-up koji uvijek izgleda savršeno."
+        },
+        {
+          "id": "GLAM MAKEUP",
+          "name": "GLAM MAKE-UP",
+          "price": "160€",
+          "duration": "1.5 sata",
+          "description": "Intenzivan i izražajan glam look koji snažno djeluje pred kamerom."
+        },
+        {
+          "id": "HALF SET DAY",
+          "name": "HALF SET DAY",
+          "price": "650€",
+          "duration": "4–5 sati",
+          "description": "Poludnevna pratnja na setu s kontinuiranim korekcijama za besprijekoran izgled."
+        },
+        {
+          "id": "FULL SET DAY",
+          "name": "FULL SET DAY",
+          "price": "1.400€",
+          "duration": "8–9 sati",
+          "description": "Cjelodnevna pratnja na setu s konstantnim touch-upovima za savršen rezultat."
         }
       ]
     },
     "gallery": {
-      "pageTitle": "Galerija",
-      "introText": "Uskoro dostupno..."
+      "gallery.pageTitle": "Painted by Sara - Galerie",
+      "gallery.title": "Galerija",
+      "gallery.loading": "Učitavanje galerije...",
+      "gallery.noAlbums": "Nema albuma za prikaz.",
+      "gallery.error": "Greška pri učitavanju galerije.",
+      "gallery.loadingAlbum": "Učitavanje albuma...",
+      "gallery.errorAlbum": "Greška pri učitavanju albuma.",
+      "gallery.prev": "Prethodna",
+      "gallery.next": "Sljedeća",
+      "gallery.close": "Zatvori",
+      "gallery.albumName": "Album"
     }
   }
 }

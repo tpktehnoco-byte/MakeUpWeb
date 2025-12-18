@@ -4,63 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate-key="global.siteTitle">PAINTED BY SARA</title>
+    <title>Painted by Sara</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome ikone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tvoj CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;300;400;700&family=Lato:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- Header -->
     <header>
         <nav>
-            <a href="galerija.html" class="fa-solid fa-camera" style="font-size: 32px;"></a>
-            <a href="index.html" class="logo">
-                <img src="images/logoW320.png" alt="Painted by Sara Logo" class="logo-img active"></a>
-            <a href="#contact" class="fa-solid fa-phone-volume" style="font-size: 32px;"></a>
+            <a href="index.html" class="logo" data-translate-key="global.siteTitle"></a>
+            <ul>
+                <li><a href="index.html" class="active" data-translate-key="global.navHome"></a></li>
+                <li><a href="booking.html" data-translate-key="global.navBooking"></a></li>
+                <li><a href="galerija.html" data-translate-key="global.navGallery"></a></li>
+                <li><a href="#contact" data-translate-key="global.navContact"></a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Hero Slider -->
+        <section class="hero-slider">
+            <div class="slide"></div>
+
+            <div class="hero-content">
+                <h1 data-translate-key="home.heroTitle"></h1>
+                <p data-translate-key="home.heroSubtitle"></p>
+                <a href="booking.html" class="cta-button" data-translate-key="home.heroButtonText"></a>
+            </div>
+
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="slider-dots"></div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about-section-enhanced">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image"></div>
+                    <div class="about-content">
+                        <h2 data-translate-key="home.aboutTitle"></h2>
+                        <p data-translate-key="home.aboutMainText"></p>
+                        <h3 data-translate-key="home.aboutExpertiseTitle"></h3>
+                        <ul class="expertise-list">
+                            <li>Bridal Make-up</li>
+                            <li>Events & Gala</li>
+                            <li>Photoshooting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services-section">
+            <h2 data-translate-key="home.servicesTitle"></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-heart"></i>
+                    <h3 data-translate-key="home.serviceBridal.name"></h3>
+                    <p data-translate-key="home.serviceBridal.description"></p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-champagne-glasses"></i>
+                    <h3 data-translate-key="home.serviceEvents.name"></h3>
+                    <p data-translate-key="home.serviceEvents.description"></p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-camera"></i>
+                    <h3 data-translate-key="home.servicePhotoshoot.name"></h3>
+                    <p data-translate-key="home.servicePhotoshoot.description"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <h2 data-translate-key="home.testimonialsTitle"></h2>
+            <div class="testimonials-container">
+                <blockquote>
+                    <p data-translate-key="home.testimonial1.text"></p>
+                    <cite data-translate-key="home.testimonial1.author"></cite>
+                </blockquote>
+                <blockquote>
+                    <p data-translate-key="home.testimonial2.text"></p>
+                    <cite data-translate-key="home.testimonial2.author"></cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
         <select id="language-switcher">
             <option value="de">DE</option>
             <option value="en">EN</option>
             <option value="exyu">EXYU</option>
-        </select><!-- NOVA HERO SEKCIJA SA SLIDEROM -->
-        <section class="hero-slider">
-            <div class="slide active"></div> <!-- Prvi slide, ostali će biti dodani od strane JS-a -->
-
-            <div class="hero-content">
-                <h1 data-translate-key="home.heroTitle">Ihre Vision, Meine Kunst</h1>
-                <p data-translate-key="home.heroSubtitle">Professionelles Make-up für unvergessliche Momente.</p>
-                <a href="booking.html" class="cta-button" data-translate-key="home.heroButtonText">Jetzt Buchen</a>
-            </div>
-
-            <!-- Strelice za navigaciju -->
-            <a class="prev">&#10094;</a>
-            <a class="next">&#10095;</a>
-
-            <!-- Indikatori (tačkice) ispod -->
-            <div class="slider-dots"></div>
-        </section>
-    </main>
-
-    <footer>
-        <nav>
-            <ul>
-                <a href="index.html" class="fa-solid fa-home" style="font-size: 24px; color: whitesmoke;"> </a>
-                <a href="galerija.html" class="fa-solid fa-camera" style="font-size: 24px; color: whitesmoke;"> </a>
-                <a href="#contact" class="fa-solid fa-phone-volume" style="font-size: 24px; color: whitesmoke;"> </a>
-            </ul>
-        </nav>
-
-        <p data-translate-key="global.footerCopyright">© 2024 Painted by Sara. Alle Rechte vorbehalten.</p>
+        </select>
+        <p data-translate-key="global.footerCopyright"></p>
     </footer>
 
+    <!-- JS -->
     <script src="js/config-loader.js"></script>
     <script src="js/slider.js"></script>
 </body>

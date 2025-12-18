@@ -4,26 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate-key="gallery.pageTitle">Galerie</title>
+    <title data-translate-key="gallery.pageTitle">Painted by Sara - Galerie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/gstyle.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
     <header>
         <nav>
-            <a href="index.html" class="logo" data-translate-key="global.siteTitle">PAINTED BY SARA</a>
+            <a href="index.html" class="logo" data-translate-key="global.siteTitle"></a>
             <ul>
-                <li><a href="index.html" data-translate-key="global.navHome">Startseite</a></li>
-                <li><a href="booking.html" data-translate-key="global.navBooking">Booking & Preise</a></li>
-                <li><a href="galerija.html" class="active" data-translate-key="global.navGallery">Galerie</a></li>
-                <li><a href="#contact" data-translate-key="global.navContact">Kontakt</a></li>
+                <li><a href="index.html" data-translate-key="global.navHome"></a></li>
+                <li><a href="booking.html" data-translate-key="global.navBooking"></a></li>
+                <li><a href="galerija.html" class="active" data-translate-key="global.navGallery"></a></li>
+                <li><a href="#contact" data-translate-key="global.navContact"></a></li>
             </ul>
             <select id="language-switcher">
                 <option value="de">DE</option>
@@ -35,21 +32,31 @@
 
     <main>
         <section class="gallery-section">
-            <div class="container">
-                <h1 data-translate-key="gallery.pageTitle">Galerie</h1>
-                <p data-translate-key="gallery.introText">Bald verfügbar...</p>
-                <!-- Slike će biti dinamički učitane iz Google Drive -->
-            </div>
+            <h2 class="gallery-title" data-translate-key="gallery.title"></h2>
+            <div class="albums-grid"></div>
+            <div class="gallery-grid"></div>
+            <p class="gallery-status" hidden data-translate-key="gallery.loading"></p>
         </section>
+
+        <!-- Overlay slider -->
+        <div id="album-slider" class="slider-overlay hidden">
+            <button class="close" type="button" aria-label="Close" data-translate-key="gallery.close">&times;</button>
+            <div class="slider-content">
+                <button class="prev" type="button" aria-label="Prev" data-translate-key="gallery.prev">&#10094;</button>
+                <div class="slide"></div>
+                <button class="next" type="button" aria-label="Next" data-translate-key="gallery.next">&#10095;</button>
+            </div>
+            <div class="slider-dots"></div>
+        </div>
     </main>
 
     <footer>
-        <p data-translate-key="global.footerCopyright">© 2024 Painted by Sara. Alle Rechte vorbehalten.</p>
+
+        <p data-translate-key="global.footerCopyright"></p>
     </footer>
 
     <script src="js/config-loader.js"></script>
-    <!-- <script src="/js/gallery.js"></script> Ovaj skripta će biti kreirana sledeće -->
+    <script src="js/gslider.js"></script>
 </body>
-
 
 </html>

@@ -8,25 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Lato:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- Header -->
     <header>
         <nav>
-            <a href="index.html" class="logo">
-                <img src="images/logoB320.png" alt="Painted by Sara Logo" class="logo-img">
-            </a>
             <ul>
-                <li><a href="index.html" data-translate-key="global.navHome">Startseite</a></li>
-                <li><a href="booking.html" class="active" data-translate-key="global.navBooking">Booking & Preise</a>
+                <li><a href="index.html" data-translate-key="global.navHome"></a></li>
+                <li><a href="booking.html" class="active" data-translate-key="global.navBooking"></a>
                 </li>
-                <li><a href="galerija.html" data-translate-key="global.navGallery">Galerie</a></li>
-                <li><a href="#contact" data-translate-key="global.navContact">Kontakt</a></li>
+                <li><a href="galerija.html" data-translate-key="global.navGallery"></a></li>
+                <li><a href="#contact" data-translate-key="global.navContact"></a></li>
             </ul>
             <select id="language-switcher">
                 <option value="de">DE</option>
@@ -36,61 +31,75 @@
         </nav>
     </header>
 
+    <!-- Main -->
     <main class="booking-main">
         <div class="container">
-            <h1 data-translate-key="booking.pageTitle">Booking & Preise</h1>
-            <p data-translate-key="booking.introText">Wählen Sie das Paket, das am besten zu Ihren Bedürfnissen passt.
-            </p>
+            <h1 data-translate-key="booking.pageTitle"></h1>
+            <p data-translate-key="booking.introText"></p>
 
+            <!-- Packages grid -->
             <div id="packages-container" class="packages-grid">
-                <!-- Paketi će biti dinamički ubačeni ovde -->
+                <div class="package-card">
+                    <h3></h3>
+                    <p></p>
+                    <button class="book-btn" data-package-id="standard"></button>
+                </div>
+
             </div>
         </div>
     </main>
 
+    <!-- Booking Modal -->
     <div id="booking-modal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h2 data-translate-key="booking.formTitle">Reservierungsformular</h2>
+            <h2 data-translate-key="booking.formTitle"></h2>
             <p id="selected-package-name"></p>
             <form id="booking-form">
                 <input type="hidden" id="package-id-input" name="packageId" required>
                 <div class="form-group">
-                    <label for="name">Ihr Name *</label>
+                    <label for="name"></label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Ihre E-Mail *</label>
+                    <label for="email"></label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Ihre Telefonnummer</label>
+                    <label for="phone"></label>
                     <input type="tel" id="phone" name="phone">
                 </div>
                 <div class="form-group">
-                    <label for="date">Gewünschtes Datum *</label>
+                    <label for="date"></label>
                     <input type="date" id="date" name="date" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Weitere Wünsche</label>
+                    <label for="message"></label>
                     <textarea id="message" name="message" rows="4"></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Anfrage senden</button>
+                <button type="submit" class="submit-btn"></button>
             </form>
         </div>
     </div>
 
+    <!-- Success Message -->
     <div id="success-message" class="success-message">
-        <p data-translate-key="booking.successMessage">Ihre Anfrage wurde erfolgreich gesendet!</p>
+        <p data-translate-key="booking.successMessage">
+            Ihre Anfrage wurde erfolgreich gesendet!
+        </p>
     </div>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p data-translate-key="global.footerCopyright">© 2024 Painted by Sara. Alle Rechte vorbehalten.</p>
+            <p data-translate-key="global.footerCopyright">
+                © 2024 Painted by Sara. Alle Rechte vorbehalten.
+            </p>
         </div>
     </footer>
 
     <script src="js/config-loader.js"></script>
+
     <script src="js/booking.js"></script>
 </body>
 
